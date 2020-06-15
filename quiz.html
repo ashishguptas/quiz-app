@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Play</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="quiz" class="justify-center flex-column">
+            <div id="progressBar">
+                <div id="progressBox"></div>
+            </div>
+            <div id="board">
+                <div id="board-content">
+                    <p id="questionCounter" class="board-text">Question</p>
+                    <h1 class="board-value" id="progressText">1/3</h1>
+                    
+                </div>
+                
+                <!-- <div id="board-content">
+                    <p class="board-text">Time</p>
+                    <h1 class="board-value" id="time">00:30</h1>
+                </div> -->
+                <div id="board-content">
+                    <p class="board-text">Score</p>
+                    <h1 class="board-value" id="score">0</h1>
+                </div>
+            </div>
+            <h2 id="question">What is the answer to this question?</h2>
+            <div class="choise-question">
+                <!-- <p class="choise-type">A</p> -->
+                <p class="choise-text" data-number="1">Choise 1</p>
+            </div>
+            <div class="choise-question">
+                <!-- <p class="choise-type">B</p> -->
+                <p class="choise-text" data-number="2">Choise 2</p>
+            </div>
+            <div class="choise-question">
+                <!-- <p class="choise-type">C</p> -->
+                <p class="choise-text" data-number="3">Choise 3</p>
+            </div>
+            <div class="choise-question">
+                <!-- <p class="choise-type">D</p> -->
+                <p class="choise-text" data-number="4">Choise 4</p>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

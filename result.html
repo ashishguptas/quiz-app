@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="result" class="flex-center flex-column">
+            <h1>Your Score Is</h1>
+            <h1 id="finalscore">0</h1>
+            <!-- <form>
+                <input type="text" placeholder="Username" id="username" name="username">
+                <button type="submit" disabled class="btn" id="saveScore" onclick="saveHeighScore(event)">Save</button>
+            </form> -->
+            <a href="quiz.html" class="btn">Play Again?</a>
+            <a href="/index.html" class="btn">Go Home</a>
+        </div> 
+    </div> 
+    <script src="app.js"></script>
+    <script>
+        const username = document.getElementById('username');
+        const saveScoreBtn = document.getElementById('saveScore');
+        const finalScore = document.getElementById('finalscore');
+        const recentScore = localStorage.getItem('recentScore'); 
+        finalScore.innerText = Math.round(recentScore);
+        username.addEventListener('keyup', () => {
+            saveScoreBtn.disabled = !username.value;
+        })
+        function saveHeighScore(e){
+            e.preventDefault()
+            console.log('Working')
+        }
+    </script>
+</body>
+</html>
