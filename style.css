@@ -97,8 +97,8 @@
   .btn:hover {
     cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
-    transform: translateY(-0.1rem);
-    transition: transform 150ms;
+    /* transform: translateY(-0.1rem);
+    transition: transform 150ms; */
   }
   
   .btn[disabled]:hover {
@@ -119,9 +119,10 @@
   }
   .choise-question:hover{
       cursor: pointer;
+      background-color: #e5e5e5;
       box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
-      transform: translateY(-0.1rem);
-      transition: transform 150ms;
+      /* transform: translateY(0.1rem); */
+      /* transition: transform 150ms; */
   }
   .choise-type{
       background-color: #08838b;
@@ -135,14 +136,14 @@
     width: 100%;
   }
   .correct{
-    background-color: #7ed321;
+    background-color: #7ed321 !important;
     color: #ffffff;
   }
   .correct p{
     color: #ffffff;
   }
   .incorrect{
-    background-color: tomato;
+    background-color: tomato !important;
     color: #ffffff;
   }
   .incorrect p{

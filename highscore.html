@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Score</title>
+</head>
+<body>
+    <ul id="highscorelist"></ul>
+</body>
+<script>
+    const highscorelist = document.getElementById('highscorelist');
+    const bestScore = JSON.parse(localStorage.getItem('bestScore')) || [];
+
+    highscorelist.innerHTML = bestScore.map(score => {
+        return `<li>${score.name} - ${score.score}</li>`;
+    }).join('')
+</script>
+</html>

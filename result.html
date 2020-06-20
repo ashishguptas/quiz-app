@@ -11,10 +11,10 @@
         <div id="result" class="flex-center flex-column">
             <h1>Your Score Is</h1>
             <h1 id="finalscore">0</h1>
-            <!-- <form>
+            <form>
                 <input type="text" placeholder="Username" id="username" name="username">
                 <button type="submit" disabled class="btn" id="saveScore" onclick="saveHeighScore(event)">Save</button>
-            </form> -->
+            </form>
             <a href="quiz.html" class="btn">Play Again?</a>
             <a href="/index.html" class="btn">Go Home</a>
         </div> 
@@ -25,13 +25,29 @@
         const saveScoreBtn = document.getElementById('saveScore');
         const finalScore = document.getElementById('finalscore');
         const recentScore = localStorage.getItem('recentScore'); 
+        const bestScore = JSON.parse(localStorage.getItem('bestScore')) || [];
+        
+        const maxHighScore = 5;
+
         finalScore.innerText = Math.round(recentScore);
+
         username.addEventListener('keyup', () => {
             saveScoreBtn.disabled = !username.value;
         })
         function saveHeighScore(e){
             e.preventDefault()
-            console.log('Working')
+            // console.log('Working')
+            const score = {
+                score : Math.floor(Math.random() * 100),
+                name: username.value
+            }
+            bestScore.push(score);
+            bestScore.sort((x,y) => y.score - x.score);
+            bestScore.splice(5);
+
+            localStorage.setItem('bestScore', JSON.stringify(bestScore))
+            // console.log(bestScore)
+            window.location.assign('/')
         }
     </script>
 </body>
